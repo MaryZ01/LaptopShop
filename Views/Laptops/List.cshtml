@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_Layout"; //html-блок знизу буде підставлений в @RenderBody() в файлі _Layout
+}
+
+<!DOCTYPE html>
+
+<h1>All laptops:</h1>
+<h3>@Model.current_category</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Laptop laptop in Model.AllLaptops)
+        {
+            @Html.Partial("AllLaptops", laptop)
+        }
+    }
+</div>

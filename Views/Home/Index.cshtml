@@ -1,0 +1,14 @@
+﻿@model HomePageViewModel
+
+<!DOCTYPE html>
+
+<h1>Найкращі пропозиції</h1>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Laptop laptop in Model.favorite_laptops)
+        {
+            @Html.Partial("AllLaptops", laptop)
+        }
+    }
+</div>
+
